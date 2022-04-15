@@ -19,7 +19,7 @@ ctypes.windll.shell32.SHGetFolderPathW(None, CSIDL_PERSONAL, None, SHGFP_TYPE_CU
 def msg(title, message):
     messagebox.showinfo(title,  message)
 
-def done():
+def doneForNow():
     note = entry.get("1.0", tk.END)
     x = datetime.datetime.now()
     dayStr = x.strftime("%A")
@@ -36,26 +36,61 @@ def done():
     # destination = Filename
 
     try:
-    	file = open(destination, "rt")
-    	file.read()
-    	file.close()
+        file = open(destination, "rt")
+        file.read()
+        file.close()
     except:
-    	file = open(destination, "at")
-    	file.write(header + note)
-    	file.close()
-    	print("Created a new file: " + Filename)
-    	entry.delete("1.0", tk.END)
-    	msg("Success!", "New file created and saved.")
+        file = open(destination, "at")
+        file.write(header + note)
+        file.close()
+        print("Created a new file: " + Filename)
+        entry.delete("1.0", tk.END)
+        msg("Success!", "New file created and saved.")
     else:
-    	file = open(destination, "at")
-    	file.write("\n" + note)
-    	file.close()
-    	entry.delete("1.0", tk.END)
-    	print("Edited the file: " + Filename)
-    	msg("Success!", "Edited the previous file")
+        file = open(destination, "at")
+        file.write("\n" + note)
+        file.close()
+        entry.delete("1.0", tk.END)
+        print("Edited the file: " + Filename)
+        msg("Success!", "Edited the previous file")
 
-def delete():
-	print("hello")
+def doneForYest():
+    note = entry.get("1.0", tk.END)
+    x = datetime.date.today() - datetime.timedelta(days=1)
+    dayStr = x.strftime("%A")
+    month = x.strftime("%B")
+    yearStr = str(x.year)
+    dateStr = str(x.strftime("%d"))
+    yearInt = x.year
+    dateInt = x.strftime("%d")
+    monthStr = x.strftime("%m")
+
+    Filename = dateStr + "-" + monthStr + "-" + yearStr + ".txt"
+    header = "Date: " + dateStr + " " + month + " " + yearStr + "\nDay: " + dayStr + "\n\n"
+    destination = buf.value + "\\Naffy's Diary\\" + Filename
+    # destination = Filename
+
+    try:
+        file = open(destination, "rt")
+        file.read()
+        file.close()
+    except:
+        file = open(destination, "at")
+        file.write(header + note)
+        file.close()
+        print("Created a new file: " + Filename)
+        entry.delete("1.0", tk.END)
+        msg("Success!", "New file created and saved.")
+    else:
+        file = open(destination, "at")
+        file.write("\n" + note)
+        file.close()
+        entry.delete("1.0", tk.END)
+        print("Edited the file: " + Filename)
+        msg("Success!", "Edited the previous file")
+
+def no():
+    msg("Sorry", "But I know that you can't predict the future. HEHEHE")
 
 frame = tk.Frame(window, bg='#444444')
 
@@ -65,15 +100,18 @@ greeting.pack()
 entry = tk.Text(height=20, font=("Comic Sans MS", 13), bg='#cccccc')
 entry.pack()
 
-# entry.configure(font = Font_tuple)
-# greeting.configure(font = Font_tuple)
-img = PhotoImage(file='./done.png')
-# button = tk.Button(frame, text="Done for now", relief=tk.RAISED, border=3, width=15, font=("Comic Sans MS", 10, "bold"), height=2, command=done)
-button = tk.Button(frame, image=img, borderwidth=0, bg='#444444', command=done)
-button.pack(side="left", padx=5)
+nowImg = PhotoImage(file='./assets/done_for_now.png')
+yestImg = PhotoImage(file='./assets/done_for_yest.png')
+tomImg = PhotoImage(file='./assets/done_for_tom.png')
 
-# button2 = tk.Button(frame, text="Delete today's file", relief=tk.RAISED, border=3, width=20, font=("Comic Sans MS", 10, "bold"), height=2, command=delete)
-# button2.pack(side="right", padx=5)
+button2 = tk.Button(frame, image=yestImg, borderwidth=0, bg='#444444', command=doneForYest)
+button2.pack(side="left", padx=5, pady=2)
+
+button3 = tk.Button(frame, image=tomImg, borderwidth=0, bg='#444444', command=no)
+button3.pack(side="right", padx=5, pady=2)
+
+button = tk.Button(frame, image=nowImg, borderwidth=0, bg='#444444', command=doneForNow)
+button.pack(side="right", padx=5, pady=2)
 
 frame.pack(expand=True, padx=10, pady=10)
 
