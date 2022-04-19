@@ -25,7 +25,7 @@ It also provides programmers a new idea for a project to work on. 💡
 - Write entries for previous days ![](https://img.shields.io/badge/-New!-red)
 
 ### Upcoming features:
-- ~~Write an entry for yesterday~~
 - View previously written entries in the app.
 - Edit previously written entries in the app.
+- Protect app with a password
 - Any other features which will be provided by you 😄
