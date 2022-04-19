@@ -328,8 +328,7 @@ def about():
 # ============================
 def create_menu():
     menubar = Menu(
-        window,
-        background='#ff8000', foreground='black', activebackground='white', activeforeground='black'
+        window
     )
 
 
@@ -409,13 +408,13 @@ entry = tk.Text(
 entry.pack()
 
 nowImg = PhotoImage(
-    file='./assets/done_for_now.png'
+    file='./assets/today.png'
 )
 yestImg = PhotoImage(
-    file='./assets/done_for_yest.png'
+    file='./assets/yesterday.png'
 )
-tomImg = PhotoImage(
-    file='./assets/done_for_tom.png'
+otherImg = PhotoImage(
+    file='./assets/other.png'
 )
 
 button2 = tk.Button(
@@ -433,7 +432,7 @@ button2.pack(
 
 button3 = tk.Button(
     frame,
-    image=tomImg,
+    image=otherImg,
     borderwidth=0,
     bg='#444444',
     command=other
