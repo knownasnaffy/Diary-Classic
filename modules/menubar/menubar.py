@@ -1,8 +1,12 @@
+import subprocess
 from tkinter import Menu
-from modules.menubar import about, openEntries
+from modules.menubar import about
 
 
-def menu(window, close):
+def menu(window, close, entriesDir):
+
+    def openEntries():
+        subprocess.Popen(f'explorer "{entriesDir}"')
 
     menubar = Menu(
         window

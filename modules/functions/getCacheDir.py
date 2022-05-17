@@ -1,10 +1,11 @@
 import os
 import platform
+from data.app import name
 
 def getCacheDir(dev):
 	if not dev:
 		if platform.system() == "Windows":
-			cachePath = os.getenv('LOCALAPPDATA') + "\\cache\\"
+			cachePath = os.getenv('LOCALAPPDATA') + "\\" + name + "\\cache\\"
 		else:
 			cachePath = os.getcwd() + "\\cache\\"
 

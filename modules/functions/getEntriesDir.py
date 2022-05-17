@@ -1,10 +1,11 @@
 import os
 import platform
+from data.app import name
 
 def getEntriesDir(dev):
 	if not dev:
 		if platform.system() == "Windows":
-			entriesPath = os.getenv('LOCALAPPDATA') + "\\entries\\"
+			entriesPath = os.getenv('LOCALAPPDATA') + "\\" + name + "\\entries\\"
 		else:
 			entriesPath = os.getcwd() + "\\entries\\"
 

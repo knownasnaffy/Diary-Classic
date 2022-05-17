@@ -19,7 +19,11 @@
 		":umm:" : "🙁",
 		":nomouth:" : "😶"
 	},
-	"settings": {
-		"env": "dev"
+	"settings" : {
+		"env" : "pro"
+	},
+	"app" : {
+		"name" : "Diary",
+		"version" : "v2.3.1"
 	}
 }

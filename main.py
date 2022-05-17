@@ -14,16 +14,6 @@ from modules.menubar import menu
 # ============================
 
 # ============================
-# Defining Variables
-# ============================
-
-
-# ============================
-# 
-# ============================
-
-
-# ============================
 # Determining Environment
 # ============================
 
@@ -43,8 +33,8 @@ else:
 # Defining Variables
 # ============================
 
-entriesDir = getEntriesDir(dev)
 cacheDir = getCacheDir(dev)
+entriesDir = getEntriesDir(dev)
 
 # ============================
 # 
@@ -218,7 +208,7 @@ frame.pack(
 # Calling and Binding Functions
 # ============================
 
-menu(window, close)
+menu(window, close, entriesDir)
 window.protocol(
     'WM_DELETE_WINDOW',
     close
