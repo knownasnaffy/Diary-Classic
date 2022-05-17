@@ -8,7 +8,7 @@
 
 # Diary
 
-![](https://img.shields.io/badge/version-v2.3.0-orange?style=for-the-badge) ![](https://img.shields.io/github/issues/naffydharni006/Diary?style=for-the-badge) ![](https://img.shields.io/github/forks/naffydharni006/Diary?style=for-the-badge) ![](https://img.shields.io/github/stars/naffydharni006/Diary?style=for-the-badge) ![](https://img.shields.io/github/license/naffydharni006/Diary?style=for-the-badge)
+![](https://img.shields.io/badge/version-v2.3.1-orange?style=for-the-badge) ![](https://img.shields.io/github/issues/naffydharni006/Diary?style=for-the-badge) ![](https://img.shields.io/github/forks/naffydharni006/Diary?style=for-the-badge) ![](https://img.shields.io/github/stars/naffydharni006/Diary?style=for-the-badge) ![](https://img.shields.io/github/license/naffydharni006/Diary?style=for-the-badge)
 
 I made this app because I was too lethargic to write a diary on pages and also, I made many mistakes while writing. It didn't feel safe too as any random person can peek in it.
 So that is the reason why I felt a need for an application on my PC.
@@ -27,4 +27,5 @@ It also provides programmers a new idea for a project to work on. 💡
 - Edit previously written entries in the app.
 - Protect app with a password
 - Theme selection
+- Status Bar
 - Any other features which will be provided by you 😄
