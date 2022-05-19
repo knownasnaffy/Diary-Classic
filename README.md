@@ -39,3 +39,8 @@ v2.3.2
 - Theme selection
 - Status Bar
 - Any other features which will be provided by you 😄
+
+
+
+## Important!
+Today, an idea came to my mind, I have started this app just by a random thought and I never tried to see similar apps made by other people. So, I searched accross github and found many interesting results. I am also not a pro in python or any other such programming language too, due to which I think my app is not that good. I can definitely make it better and then best but I think I will need some experience. So, I am going to quite this apps development for some while. I am going to practice for some while and then continue where I left off. Till then, have a good time people.
