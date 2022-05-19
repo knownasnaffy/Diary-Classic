@@ -32,7 +32,7 @@ v2.3.2
 > **Tip:** For complete changelog, refer to this page: [CHANGELOG](https://github.com/naffydharni006/Diary/blob/v2.3/changelog.md)
 
 
-## Upcoming features:
+## Upcoming features
 - View previously written entries in the app.
 - Edit previously written entries in the app.
 - Protect app with a password
