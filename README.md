@@ -16,24 +16,23 @@ So that is the reason why I felt a need for an application on my PC.
 I also thought that I am not the only one who is feeling that way. So I made it open source, as anyone can use it.
 It also provides programmers a new idea for a project to work on. 💡
 
-### What's New?
-<!-- #one -->
+## What's New?
 v2.3.0
 - [Added] Settings will now use json instead of dot-env (will be soon updated to some encrypted dbms)
 - [Added] You can now use emojies
 - [Improved] Different storage folders for windows and linux (Came to my senses after a long time that I made this app not usable for non-windows users, so, this update solves the problem)
 - [Improved] Organised the code by dividing some parts into package modules
-<!-- #one -->
-<!-- #two -->
+
 v2.3.1
 - [Bugs Fixed] Some functions had some mistakes
-<!-- #two -->
-<!-- #three -->
+
 v2.3.2
 - [Improved] Code
-<!-- #three -->
 
-### Upcoming features:
+> **Tip:** For complete changelog, refer to this page: [CHANGELOG](https://github.com/naffydharni006/Diary/blob/v2.3/changelog.md)
+
+
+## Upcoming features:
 - View previously written entries in the app.
 - Edit previously written entries in the app.
 - Protect app with a password
