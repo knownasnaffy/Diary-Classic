@@ -1,4 +1,4 @@
-## Changelog:
+## Changelog
 
 #### v1.0.0
 - `[Feature]` Write an entry for the current day
