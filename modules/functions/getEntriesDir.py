@@ -1,8 +1,9 @@
 import os
 import platform
 from data.app import name
+from data.settings import dev
 
-def getEntriesDir(dev):
+def getEntriesDir():
 	if not dev:
 		if platform.system() == "Windows":
 			entriesPath = os.getenv('LOCALAPPDATA') + "\\" + name + "\\entries\\"
@@ -16,9 +17,10 @@ def getEntriesDir(dev):
 		print("Enties directory exixts")
 	else:
 		try:
-			os.makedirs(entriesPath)
+			os.makedirs(entriesPath+1)
 			print("Created entries directory")
-		except:
-			print("An exception occured while creating entries directory")
+		except Exception as e:
+			# print("An exception occured while creating entries directory")
+			print("An exception occured while creating entries directory:\n{e}")
 
 	return entriesPath

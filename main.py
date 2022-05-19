@@ -7,23 +7,7 @@ import datetime
 from tkinter import PhotoImage, Button, Tk, Label, Frame, Text, Toplevel
 from tkcalendar import Calendar
 from modules.functions import closeWindow, getCacheDir, getEntriesDir, done
-from data.settings import env
 from modules.menubar import menu
-# ============================
-# 
-# ============================
-
-# ============================
-# Determining Environment
-# ============================
-
-if env ==  "dev":
-    dev=True
-    print("Working in Development Environment")
-else:
-    dev=False
-    print("Working in Production Environment")
-
 # ============================
 # 
 # ============================
@@ -33,8 +17,8 @@ else:
 # Defining Variables
 # ============================
 
-cacheDir = getCacheDir(dev)
-entriesDir = getEntriesDir(dev)
+cacheDir = getCacheDir()
+entriesDir = getEntriesDir()
 
 # ============================
 # 
@@ -67,7 +51,7 @@ window.configure(
 # Defining Functions
 # ============================
 def close():
-    closeWindow(dev, window, entriesDir)
+    closeWindow(window, entriesDir)
 
 def other():
     top = Toplevel(

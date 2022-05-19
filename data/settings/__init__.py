@@ -1,1 +1,1 @@
-from data.settings.env import env
+from data.settings.env import env, dev

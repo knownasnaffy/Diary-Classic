@@ -1,12 +1,15 @@
 import os
 from tkinter.messagebox import askyesno, showinfo
 from modules.functions import getEntriesDir
+from data.settings import dev
+
+
 def files(path):
     for file in os.listdir(path):
         if os.path.isfile(os.path.join(path, file)):
             yield file
 
-def closeWindow(dev, window, entriesDir):
+def closeWindow(window, entriesDir):
 	if not dev:
 		response = askyesno(
             'Exit',
